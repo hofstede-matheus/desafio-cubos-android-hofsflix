@@ -1,9 +1,10 @@
-package com.matheushofstede.hofsflix
+package com.matheushofstede.hofsflix.Views
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
+import com.matheushofstede.hofsflix.R
 
 class MainActivity : AppCompatActivity() {
 
