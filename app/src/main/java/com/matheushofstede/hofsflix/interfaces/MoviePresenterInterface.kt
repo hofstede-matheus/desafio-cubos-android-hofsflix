@@ -1,0 +1,4 @@
+package com.matheushofstede.hofsflix.interfaces
+
+
+interface MoviePresenterInterface

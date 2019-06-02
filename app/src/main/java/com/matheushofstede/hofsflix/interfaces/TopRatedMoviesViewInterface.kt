@@ -1,4 +1,4 @@
-package com.matheushofstede.hofsflix.Interfaces
+package com.matheushofstede.hofsflix.interfaces
 
 import com.matheushofstede.hofsflix.TopRatedMovies
 import retrofit2.Response

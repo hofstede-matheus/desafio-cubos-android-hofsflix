@@ -7,7 +7,7 @@
         tools:showIn="@layout/activity_movie"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Views.MovieActivity">
+        tools:context=".views.MovieActivity">
 
     <LinearLayout
             android:id="@+id/info"
@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_margin"
-                android:text="Descrição"
+                android:text="@string/descricao"
                 android:textStyle="bold"/>
         <TextView
                 android:id="@+id/tv_overview"
@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_margin"
-                android:text="Data de lançamento"
+                android:text="@string/data_de_lancamento"
                 android:textStyle="bold"/>
         <TextView
                 android:id="@+id/tv_release_date"
