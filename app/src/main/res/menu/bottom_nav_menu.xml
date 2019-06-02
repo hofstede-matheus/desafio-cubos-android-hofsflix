@@ -6,9 +6,6 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
 
-    <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+    <!-- Teria um funcão de mostrar por categorias, mas percebi que era mais difícil do que eu imaginava-->
 
 </menu>

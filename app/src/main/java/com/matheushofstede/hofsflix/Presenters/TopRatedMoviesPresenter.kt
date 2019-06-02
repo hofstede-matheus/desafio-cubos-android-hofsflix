@@ -23,7 +23,7 @@ class TopRatedMoviesPresenter(view: TopRatedMoviesViewInterface): TopRatedMovies
     }
     override fun enviaRequisicao(retrofit: Retrofit) {
         val service = retrofit.create(Api::class.java)
-        var call = service.results
+        var call = service.topRatedMovies
 
         call.enqueue(object : Callback<TopRatedMovies> {
             override fun onResponse(call: Call<TopRatedMovies>, response: Response<TopRatedMovies>) {

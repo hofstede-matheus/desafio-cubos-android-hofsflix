@@ -34,26 +34,9 @@ class MainActivity : AppCompatActivity(), TopRatedMoviesViewInterface {
 
     lateinit var presenter: TopRatedMoviesPresenterInterface
 
-
-    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        when (item.itemId) {
-            R.id.navigation_home -> {
-                //textMessage.setText(R.string.title_home)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_dashboard -> {
-                //textMessage.setText(R.string.title_dashboard)
-                return@OnNavigationItemSelectedListener true
-            }
-        }
-        false
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val navView: BottomNavigationView = findViewById(com.matheushofstede.hofsflix.R.id.nav_view)
-        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
         presenter = TopRatedMoviesPresenter(this)
 
@@ -61,7 +44,7 @@ class MainActivity : AppCompatActivity(), TopRatedMoviesViewInterface {
         presenter.enviaRequisicao(presenter.configuraRetrofit())
 
     }
-    // Configura o RecycleView
+    // Configura o RecycleView 2 por linha
     override fun configuraRV() {
         rv = findViewById(R.id.rv)
         linearLayoutManager = GridLayoutManager(this, 2)
