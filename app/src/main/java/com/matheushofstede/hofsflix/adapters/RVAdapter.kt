@@ -46,6 +46,7 @@ class RVAdapter(private val list: ArrayList<Movie>, val context: Context): Recyc
         override fun onClick(v: View?) {
             val context = itemView.context
             val movieActivityIntent = Intent(context, MovieActivity::class.java)
+            // poderia mandar as strings logo, mas preferi mandar o objeto todo
             movieActivityIntent.putExtra("MOVIE", movie)
             context.startActivity(movieActivityIntent)
             Log.d("RecyclerView", "CLICK!")
