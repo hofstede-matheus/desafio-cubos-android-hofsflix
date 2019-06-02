@@ -1,4 +1,4 @@
-package com.matheushofstede.hofsflix.Adapters
+package com.matheushofstede.hofsflix.adapters
 
 import android.content.Context
 import android.content.Intent
@@ -14,7 +14,7 @@ import com.matheushofstede.hofsflix.R
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
-import com.matheushofstede.hofsflix.Views.MovieActivity
+import com.matheushofstede.hofsflix.views.MovieActivity
 
 
 class RVAdapter(private val list: ArrayList<Movie>, val context: Context): RecyclerView.Adapter<RVAdapter.MovieViewHolder>() {
@@ -26,7 +26,7 @@ class RVAdapter(private val list: ArrayList<Movie>, val context: Context): Recyc
     }
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        val movie = list.get(position)
+        val movie = list[position]
         holder.bind(movie, context)
     }
 
@@ -38,7 +38,6 @@ class RVAdapter(private val list: ArrayList<Movie>, val context: Context): Recyc
         private var title: TextView = itemView.findViewById(R.id.title)
         private var poster: ImageView = itemView.findViewById(R.id.movie_poster)
         private lateinit var movie: Movie
-
 
         init {
             view.setOnClickListener(this)
@@ -56,19 +55,13 @@ class RVAdapter(private val list: ArrayList<Movie>, val context: Context): Recyc
             this.movie = movie
             title?.text = movie.title
 
-
             Glide
                 .with(context)
-                .load("https://image.tmdb.org/t/p/w342" + movie.posterPath) //width 200 é um tamanho bom
+                .load("https://image.tmdb.org/t/p/w342" + movie.posterPath) //width 342 é um tamanho bom pra o poster
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .centerInside() // pra tirar o problema do poster indo além do card
                 .transition(withCrossFade())
                 .into(poster)
-
-
-
         }
-
     }
-
 }

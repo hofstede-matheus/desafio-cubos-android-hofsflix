@@ -3,6 +3,7 @@ package com.matheushofstede.hofsflix
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
+// aqui só serve mesmo o results, que é uma array de filmes
 class TopRatedMovies {
 
     @SerializedName("page")

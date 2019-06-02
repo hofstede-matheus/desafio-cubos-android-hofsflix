@@ -1,7 +1,7 @@
-package com.matheushofstede.hofsflix.Presenters
+package com.matheushofstede.hofsflix.presenters
 
-import com.matheushofstede.hofsflix.Interfaces.MoviePresenterInterface
-import com.matheushofstede.hofsflix.Interfaces.MovieViewInterface
+import com.matheushofstede.hofsflix.interfaces.MoviePresenterInterface
+import com.matheushofstede.hofsflix.interfaces.MovieViewInterface
 
 
 class MoviePresenter(view: MovieViewInterface): MoviePresenterInterface {

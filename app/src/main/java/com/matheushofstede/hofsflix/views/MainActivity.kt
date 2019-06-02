@@ -1,28 +1,18 @@
-package com.matheushofstede.hofsflix.Views
+package com.matheushofstede.hofsflix.views
 
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
-import com.matheushofstede.hofsflix.R
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.LinearLayoutManager
-import com.matheushofstede.hofsflix.Adapters.RVAdapter
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.GridLayoutManager
-import android.util.Log
-import android.widget.Toast
-import com.matheushofstede.hofsflix.Interfaces.Api
-import com.matheushofstede.hofsflix.Interfaces.TopRatedMoviesPresenterInterface
-import com.matheushofstede.hofsflix.Interfaces.TopRatedMoviesViewInterface
-import com.matheushofstede.hofsflix.Movie
-import com.matheushofstede.hofsflix.Presenters.TopRatedMoviesPresenter
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
+import com.matheushofstede.hofsflix.adapters.RVAdapter
+import com.matheushofstede.hofsflix.interfaces.TopRatedMoviesPresenterInterface
+import com.matheushofstede.hofsflix.interfaces.TopRatedMoviesViewInterface
+import com.matheushofstede.hofsflix.presenters.TopRatedMoviesPresenter
+import com.matheushofstede.hofsflix.R
 import com.matheushofstede.hofsflix.TopRatedMovies
-import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-
 
 
 class MainActivity : AppCompatActivity(), TopRatedMoviesViewInterface {

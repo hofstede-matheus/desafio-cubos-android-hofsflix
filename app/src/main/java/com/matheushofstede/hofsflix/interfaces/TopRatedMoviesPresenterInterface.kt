@@ -1,4 +1,4 @@
-package com.matheushofstede.hofsflix.Interfaces
+package com.matheushofstede.hofsflix.interfaces
 
 import retrofit2.Retrofit
 

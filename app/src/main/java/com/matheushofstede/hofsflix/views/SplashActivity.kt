@@ -1,19 +1,18 @@
-package com.matheushofstede.hofsflix.Views
+package com.matheushofstede.hofsflix.views
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import com.matheushofstede.hofsflix.R
-import kotlinx.android.synthetic.main.splash_screen.*
 
 class SplashActivity : AppCompatActivity() {
     private var mDelayHandler: Handler? = null
-    private val SPLASH_DELAY: Long = 2000 //3 seconds
+    private val SPLASH_DELAY: Long = 2000 //2 segundos
 
+    // fazendo uma runnable foi o jeito mais fácil de fazer, não sei se é gambi, mas blz
     internal val mRunnable: Runnable = Runnable {
         if (!isFinishing) {
-
             val intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
             finish()
@@ -23,22 +22,14 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_screen)
-
-        //Initialize the Handler
         mDelayHandler = Handler()
-
-        //Navigate with delay
         mDelayHandler!!.postDelayed(mRunnable, SPLASH_DELAY)
-
     }
 
     public override fun onDestroy() {
-
         if (mDelayHandler != null) {
             mDelayHandler!!.removeCallbacks(mRunnable)
         }
-
         super.onDestroy()
     }
-
 }
